@@ -1,0 +1,108 @@
+@media screen and (min-width: 480px){
+    *{ background-color:white;
+        color:#182C34; 
+        font-family: 'Noto Sans', sans-serif;
+        font-weight: 500;
+        font-size: 20px;}
+    h2, h1{
+        color:#182C34;
+    }
+}
+    
+
+*{
+    background-color: #2A9D8F;
+    color:#182C34; 
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans&display=swap');
+</style>
+
+
+section{
+    padding: 20px;
+    margin: 20px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    color:#B43718;
+    text-align: center; 
+}
+
+h2{
+    font-size:30px;
+    font-weight: bold;
+    color:#B43718; 
+}
+
+img{
+    height:auto;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+label{
+    color:#B43718;
+    font-weight: bold;
+}
+
+input,textarea{
+    font-size:20px;
+    padding: 10px;
+    border:5px, #182C34; 
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+a{
+    color:midnightblue;
+}
+
+a.visited {
+    color:#B43718;
+}
+
+button{
+   background-color:#2E4756;
+   color:aliceblue;
+   font-weight:bold;
+   border-radius: 20px;
+   border: 2px;
+   border-color:#2E4756;
+   padding:10px;
+   margin:5px;
+}
+
+.footer{
+    font-size:10px;
+    color: aliceblue;
+    background-color: #2E4756;
+    display:block;
+    padding:5px;
+    border: 15px;
+    border-color:#2E4756; 
+}
+
+#experience, #skills, #connect{
+    border:5px; 
+    border-style: solid;
+    border-color:#2E4756;
+    margin:15px;
+    padding: 15px; 
+    display: inline-block;  
+}
+
+
+.experience, .skills,.connect, .messages{
+    list-style-type:disc;
+   
+ }
+
