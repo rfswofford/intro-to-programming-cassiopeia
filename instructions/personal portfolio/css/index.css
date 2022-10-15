@@ -1,18 +1,20 @@
-@media screen and (min-width: 480px){
-    *{ background-color:white;
-        color:#182C34; 
-        font-family: 'Noto Sans', sans-serif;
-        font-weight: 500;
-        font-size: 20px;}
-    h2, h1{
-        color:#182C34;
-    }
+@media screen and (min-width: 500px){
+   
+.navbar{
+    display:block; 
+    padding: 10px;
+    width:10%;
+    background-color: #522032;
+    color:#79b8ab;
+
 }
+}
+
     
 
 *{
-    background-color: #2A9D8F;
-    color:#182C34; 
+    background-color: #79b8ab;
+    color:#003636; 
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -31,14 +33,14 @@ section{
 h1{
     font-size: 50px;
     font-weight: bold;
-    color:#B43718;
+    color:#522032;
     text-align: center; 
 }
 
 h2{
     font-size:30px;
     font-weight: bold;
-    color:#B43718; 
+    color:#522032; 
 }
 
 img{
@@ -49,15 +51,24 @@ img{
     margin-right:auto;
 }
 
-label{
-    color:#B43718;
+
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.message label{
+    flex:initial;
+    justify-content:baseline;
+    color:#522032;
     font-weight: bold;
 }
 
-input,textarea{
+.message input, .message textarea{
+    flex:initial;
+    justify-content: left;
     font-size:20px;
     padding: 10px;
-    border:5px, #182C34; 
+    border:5px, #003636; 
     margin: 10px;
     background-color: aliceblue;
 }
@@ -71,38 +82,69 @@ a.visited {
 }
 
 button{
-   background-color:#2E4756;
+   background-color:#003636;
    color:aliceblue;
    font-weight:bold;
    border-radius: 20px;
    border: 2px;
-   border-color:#2E4756;
+   border-color:#003636;
    padding:10px;
    margin:5px;
 }
 
+#navbar{
+    display:flex;
+}
+
+.navbar{
+    
+    padding: 10px;
+    width:10%;
+    background-color: #522032;
+    flex:auto;
+    color:#79b8ab;
+
+}
+
+
 .footer{
     font-size:10px;
     color: aliceblue;
-    background-color: #2E4756;
+    background-color: #003636;
     display:block;
     padding:5px;
     border: 15px;
-    border-color:#2E4756; 
+    border-color:#003636; 
 }
 
 #experience, #skills, #connect{
     border:5px; 
     border-style: solid;
-    border-color:#2E4756;
+    border-color:#003636;
     margin:15px;
     padding: 15px; 
-    display: inline-block;  
+     
 }
 
+.experience {
+    display: flex;
+    
+}
 
-.experience, .skills,.connect, .messages{
-    list-style-type:disc;
+.experience li{
+    flex:auto;
+    list-style-type: none;
+    border: 5px;
+    border-style: dotted;
+    border-color:#003636;
+    margin:5px;
+    padding:5px; 
+}
+
+.skills,.connect, .messages{
+    list-style-type: disc;
    
  }
+
+
 
