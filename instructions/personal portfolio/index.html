@@ -5,15 +5,25 @@
 <head>
     <title>Rebecca's Personal Portfolio</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
+<div id="navbar">
+    <a href="/" class="navbar" id="navbar_link_home">Home</a>
+    <a href="#about" class="navbar" id="navbar_link_about">About</a>
+    <a href="#experience" class="navbar" id="navbar_link_experience">Experience</a>
+    <a href="#skills" class="navbar" id="navbar_link_skills">Skills</a>
+    <a href="#connect" class="navbar" id="navbar_link_connect">Connect</a>
+    <a href="#message" class="navbar" id="navbar_link_message">Leave a Message</a>
+</div>
+
 
 <h1>Rebecca Swofford</h1>  
 
-<img src = "photos/rebeccaswofford.jpg" width="375" height="500" alt="image of Rebecca Swofford, a small, pink-haired white woman, standing outside">
+<img src = "photos/rebeccaswofford.jpg" alt="image of Rebecca Swofford, a small, pink-haired white woman, standing outside">
 
-<section>
+<section id="about">
     <h2>About</h2> 
 
     <p>I am aspiring full stack developer from Durham, NC. 
@@ -24,11 +34,11 @@
 
 </section>
 
-<section>
+<section id="experience" class="experience">
     <h2>Experience</h2> 
-         <ul>
+         <ul class="experience">
              <li>Director of Prevention at NC Coalition Against Domestic Violence</li>
-             <li>Formerly training Specialist at NC Coalition Against Domestic Violence</li>
+             <li>Former training Specialist at NC Coalition Against Domestic Violence</li>
              <li>Currently enrolled in Code the Dream Intro the Programming</li>
         </ul>
 
@@ -36,32 +46,37 @@
 
 <section id= "skills">
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills">
     </ul>
 </section>
 
-<section>
+<section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects"></ul>
+</section>
+
+<section id="connect">
     <h2>Connect</h2> 
-         <ul>
+         <ul class="connect">
             <li><strong>email:</strong> <a href="rebecca.swofford42@gmail.com">rebecca.swofford42@gmail.com</a></li>
             <li><strong>github:</strong> <a href = "https://github.com/rfswofford"> rfswofford </a></li>
             <li><strong>LinkedIn:</strong> <a href = "https://www.linkedin.com/in/rebecca-swofford-msw-30949665"> Rebecca Swofford, MSW</a></li>
     </ul>
 </section>
 
-<section>
+<section id="message" class="message">
     <h2>Leave a Message</h2>
     <form name="leave_message">
-        <label for="name"> Name: </label> 
-        <input type="text" name="name" required="true">
+        <label class="message" for="name"> Name: </label> 
+        <input class="message" type="text" name="name" required="true">
         <br>
         
-        <label for="email">Email: </label> 
-        <input type="email" name="email" required="true">
+        <label class="message" for="email">Email: </label> 
+        <input class="message" type="email" name="email" required="true">
         <br>
 
-        <label for="message"> Message:</label>
-        <textarea name="message" required="true"></textarea> <br>
+        <label class="message" for="message"> Message:</label>
+        <textarea class="message" name="message" required="true"></textarea> <br>
 
         <button type="submit">Submit</button> 
     </form>
@@ -70,10 +85,10 @@
 
 <section id="messages">
     <h2>Messages</h2>
-    <ul></ul>
+    <ul class="messages"></ul>
 </section>
 
-<footer></footer>
+<footer class="footer"></footer>
 
 <script  src="js/index.js"> </script>
 

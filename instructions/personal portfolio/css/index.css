@@ -1,0 +1,150 @@
+@media screen and (min-width: 500px){
+   
+.navbar{
+    display:block; 
+    padding: 10px;
+    width:10%;
+    background-color: #522032;
+    color:#79b8ab;
+
+}
+}
+
+    
+
+*{
+    background-color: #79b8ab;
+    color:#003636; 
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans&display=swap');
+</style>
+
+
+section{
+    padding: 20px;
+    margin: 20px;
+}
+
+h1{
+    font-size: 50px;
+    font-weight: bold;
+    color:#522032;
+    text-align: center; 
+}
+
+h2{
+    font-size:30px;
+    font-weight: bold;
+    color:#522032; 
+}
+
+img{
+    height:auto;
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.message label{
+    flex:initial;
+    justify-content:baseline;
+    color:#522032;
+    font-weight: bold;
+}
+
+.message input, .message textarea{
+    flex:initial;
+    justify-content: left;
+    font-size:20px;
+    padding: 10px;
+    border:5px, #003636; 
+    margin: 10px;
+    background-color: aliceblue;
+}
+
+a{
+    color:midnightblue;
+}
+
+a.visited {
+    color:#B43718;
+}
+
+button{
+   background-color:#003636;
+   color:aliceblue;
+   font-weight:bold;
+   border-radius: 20px;
+   border: 2px;
+   border-color:#003636;
+   padding:10px;
+   margin:5px;
+}
+
+#navbar{
+    display:flex;
+}
+
+.navbar{
+    
+    padding: 10px;
+    width:10%;
+    background-color: #522032;
+    flex:auto;
+    color:#79b8ab;
+
+}
+
+
+p.footer{
+    font-size:10px;
+    color: aliceblue;
+    background-color:#522032;
+    display:block;
+    padding:15px;
+    border: 15px;
+    border-color:#522032; 
+}
+
+#experience, #skills, #connect, #projects{
+    border:5px; 
+    border-style: solid;
+    border-color:#003636;
+    margin:15px;
+    padding: 15px; 
+     
+}
+
+.experience {
+    display: flex;
+    
+}
+
+.experience li{
+    flex:auto;
+    list-style-type: none;
+    border: 5px;
+    border-style: dotted;
+    border-color:#003636;
+    margin:5px;
+    padding:5px; 
+}
+
+.skills,.connect, .messages, .projects{
+    list-style-type: disc;
+   
+ }
+
+
+
