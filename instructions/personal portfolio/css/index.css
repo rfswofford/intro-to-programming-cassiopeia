@@ -107,17 +107,17 @@ button{
 }
 
 
-.footer{
+p.footer{
     font-size:10px;
     color: aliceblue;
-    background-color: #003636;
+    background-color:#522032;
     display:block;
-    padding:5px;
+    padding:15px;
     border: 15px;
-    border-color:#003636; 
+    border-color:#522032; 
 }
 
-#experience, #skills, #connect{
+#experience, #skills, #connect, #projects{
     border:5px; 
     border-style: solid;
     border-color:#003636;
@@ -141,7 +141,7 @@ button{
     padding:5px; 
 }
 
-.skills,.connect, .messages{
+.skills,.connect, .messages, .projects{
     list-style-type: disc;
    
  }

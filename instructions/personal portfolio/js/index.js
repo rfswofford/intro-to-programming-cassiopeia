@@ -9,6 +9,7 @@ const footer = document.querySelector('footer');
 //create the copyright text
 const copyright = document.createElement('p');
 copyright.innerHTML = 'Rebecca Swofford ' + thisYear; 
+copyright.className = 'footer';
 
 //add copyright text to 
 footer.appendChild(copyright); 
@@ -62,3 +63,31 @@ function buttonRemoval (evt){
     evt.target.parentNode.remove(); 
     
 }
+
+//connect to XML
+let githubRequest = new XMLHttpRequest; 
+
+//open github repository url
+githubRequest.open('GET', 'https://api.github.com/users/rfswofford/repos'); 
+
+githubRequest.send(); 
+
+//when it load it takes the JSON data from the url
+githubRequest.onreadystatechange = function (){
+   if (githubRequest.readyState === XMLHttpRequest.DONE && githubRequest.status==200){
+        let repositories = JSON.parse(githubRequest.responseText); 
+        console.log(repositories);
+        //DOM selection of projects section and then projects list
+
+        const projectSection = document.querySelector('#projects');
+
+        const projectList = projectSection.querySelector('ul'); 
+
+        for(i=0; i<repositories.length; i++){
+            const project = document.createElement ('li'); 
+            project.innerHTML = `<a href="${repositories[i].html_url}" > ${repositories[i].name} </a>`; 
+            projectList.appendChild (project); 
+        }
+    }
+}
+
