@@ -65,7 +65,7 @@ function buttonRemoval (evt){
 }
 
 //connect to XML
-let githubRequest = new XMLHttpRequest; 
+/*let githubRequest = new XMLHttpRequest; 
 
 //open github repository url
 githubRequest.open('GET', 'https://api.github.com/users/rfswofford/repos'); 
@@ -89,5 +89,25 @@ githubRequest.onreadystatechange = function (){
             projectList.appendChild (project); 
         }
     }
-}
+}*/
 
+
+fetch ('https://api.github.com/users/rfswofford/repos')
+    .then (response => response.json())
+    .then (showApiData =>{
+        const projectSection = document.querySelector('#projects');
+        const projectList = projectSection.querySelector('ul');
+
+        for (i=0; i<showApiData.length;i++){
+            const project = document.createElement ('li'); 
+            project.innerHTML = `<a href="${showApiData[i].html_url}" > ${showApiData[i].name} </a>`; 
+            projectList.appendChild (project); 
+        }
+        })
+    .catch (function(error){ 
+        console.log('unable to load git hub api', error)
+        let errorItem = document.createElement('li');
+        errorItem.innerHTML = 'There has been an error. Unable to load repositories. Please, try again later';
+        projectList.appendChild (errorItem);
+    })
+    
