@@ -73,12 +73,26 @@ img{
     background-color: aliceblue;
 }
 
+#edit-box{
+    flex:initial;
+    justify-content: left;
+    font-size:20px;
+    padding: 10px;
+    border:5px, #003636; 
+    margin: 10px;
+    background-color: aliceblue;
+}
+
 a{
     color:midnightblue;
 }
 
-a.visited {
+a:visited {
     color:#B43718;
+}
+
+a:hover {
+    color: #522032;
 }
 
 button{
@@ -90,6 +104,11 @@ button{
    border-color:#003636;
    padding:10px;
    margin:5px;
+}
+
+button:hover{
+    background-color: #522032;
+    border-color: #522032;
 }
 
 #navbar{

@@ -53,8 +53,32 @@ function formSubmit(evt) {
     removeButton.type= 'button'; 
     removeButton.addEventListener('click', buttonRemoval); 
     newMessage.appendChild(removeButton);
+
+    let editButton = document.createElement('button'); 
+    editButton.innerText= 'Edit'; 
+    editButton.type = 'button';
+    editButton.addEventListener ('click', function editMessage (evt){
+        let editBox = document.createElement('input'); 
+        editBox.type = 'text'; 
+        editBox.name = 'edited_message';
+        editBox.id = 'edit-box'
+        let resubmit = document.createElement('button'); 
+        resubmit.innerText= 'Resubmit';
+        resubmit.type = 'button'; 
+        resubmit.addEventListener('click', (evt) =>
+            { let edittedMessage = editBox.value;
+                console.log(edittedMessage); 
+            newMessage.innerHTML = `<a href="mailto:${email}"> ${name}</a> <span> ${edittedMessage}</span>`;
+            });
+        evt.target.parentElement.appendChild(editBox); 
+        evt.target.parentElement.appendChild (resubmit); }); 
+    newMessage.appendChild (editButton);
+
     messageList.appendChild(newMessage);
     document.querySelector ("[name='leave_message'").reset();
+
+    
+    
 }
 
 
@@ -64,6 +88,30 @@ function buttonRemoval (evt){
     
 }
 
+/*function editMessage (evt){
+    let editBox = document.createElement('input'); 
+    editBox.type = 'text'; 
+    editBox.name = 'edited_message';
+    editBox.id = 'edit-box'
+    let resubmit = document.createElement('button'); 
+    resubmit.innerText= 'Resubmit';
+    resubmit.type = 'button'; 
+    resubmit.addEventListener('click', changeMessage);
+    evt.target.parentElement.appendChild(editBox); 
+    evt.target.parentElement.appendChild (resubmit); 
+}
+
+function changeMessage (evt){
+    let li = evt.target[1]; 
+    let messageSection = document.querySelector('#message'); 
+    let messageList = messageSection.querySelector ('ul')
+    let originalMessage = messageList.querySelector('li')
+    originalMessage.remove(); 
+    let newMessage = document.createElement ('li'); 
+    messageSection.appendChild (newMessage);
+    }*/
+    
+    
 //connect to XML
 /*let githubRequest = new XMLHttpRequest; 
 
